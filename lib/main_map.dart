@@ -22,6 +22,7 @@ class _MainMap extends State<MainMap> {
         title: const Text('Animecca'),
         centerTitle: true,
         backgroundColor: Colors.blue[700],
+        //TODO:検索バーをつける
       ),
       body: GoogleMap(
         onMapCreated: _onMapCreated,
