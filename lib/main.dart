@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'main_map.dart';
 
 void main() => runApp(MyApp());
 
@@ -56,6 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
         children: <Widget>[
           Container(
             color: Colors.white,
+            child: MainMap(),
           ),
           Container(
             color: Colors.white,
