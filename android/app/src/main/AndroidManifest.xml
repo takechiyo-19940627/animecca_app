@@ -10,6 +10,11 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="animecca_app"
         android:icon="@mipmap/ic_launcher">
+
+        <!--        Google Map用のAPI_KEYを設定する-->
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="ENV['ANDROID_API_KEY']"/>
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
