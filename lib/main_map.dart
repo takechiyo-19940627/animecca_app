@@ -9,21 +9,40 @@ class MainMap extends StatefulWidget {
 class _MainMap extends State<MainMap> {
   GoogleMapController mapController;
 
+//  TODO:下記はユーザの現在地を取得した値をいれるように修正する
   final LatLng _center = const LatLng(45.521563, -122.677433);
 
   void _onMapCreated(GoogleMapController controller) {
     mapController = controller;
   }
 
+  buildSearchField() {
+    return AppBar(
+      backgroundColor: Colors.white,
+      centerTitle: true,
+      title: Form(
+        child: TextFormField(
+          decoration: InputDecoration(
+              labelText: '聖地を探す',
+              icon: Icon(
+                  Icons.search,
+                  color: Colors.black),),
+//TODO:検索機能実装時に下記もいじっていく
+//          onFieldSubmitted: submit,
+        ),
+      ),
+    );
+  }
+
+  //TODO:検索機能実装時に下記もいじっていく
+//  void submit(String searchValue) async {
+//
+//  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Animecca'),
-        centerTitle: true,
-        backgroundColor: Colors.blue[700],
-        //TODO:検索バーをつける
-      ),
+      appBar:buildSearchField(),
       body: GoogleMap(
         onMapCreated: _onMapCreated,
         initialCameraPosition: CameraPosition(
