@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:json_annotation/json_annotation.dart';
 
-part 'locations.g.dart';
+part 'google_location.g.dart';
 
 @JsonSerializable()
 class LatLng {
